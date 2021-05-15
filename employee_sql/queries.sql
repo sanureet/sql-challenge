@@ -75,3 +75,11 @@ FROM employees
 GROUP BY last_name
 ORDER BY freq_count DESC;
 
+--BONUS: Look for my employee ID 49942
+SELECT employees.last_name, employees.first_name, salaries.emp_no
+FROM employees 
+JOIN salaries
+ON employees.emp_no = salaries.emp_no
+WHERE employees.emp_no = 499942;
+
+
